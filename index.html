@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hello World!");
+        // alert("Hello World!!!!!")
+        var name = "Kanoute"
+        var age = 23
+        // Premiere methode de concatenation
+        console.log("je m'apelle ", name, "et ja'ai ", age)
+        // deuxieme methode d concatenation
+        console.log(`je m'apelle ${name} et j'ai ${age}`)
+        // var username = prompt("Veuillez saisir votre nom")
+        // alert("Votre nom est "+ username)
+
+        var notePython = 7
+        var noteJava = 12
+
+        // var moy=(noteJava + notePython)/2
+        if((noteJava + notePython)/2>10){
+            console.log("Bravo vous avez réussi")
+        }
+
+        else if((noteJava + notePython)/2===10) {
+            console.log("Passable")
+        }
+        else{
+            console.log("Vous allez refaire l'année")
+        }
+        // Fonctions
+        function salutations(){
+            console.log("je suis coumba, la meilleure developpeuse")
+        }
+        salutations();
+
+        function somme(nombre1, nombre2){
+            return nombre1+nombre2
+        }
+
+        console.log(somme(20,56))
+
+        function exercice1(nombre){
+            nombre +=1
+            return nombre
+        }
+        console.log(exercice1(45))
+
+        function exercice2(a, b, c) {
+           var max=0
+           if (a>b) {
+            max=a
+           }
+           else 
+           max=b
+           
+           if (c>max){
+           max=c}
+                return max
+        }
+        console.log(exercice2(12,3,7))
+
+        function maximum(x, y){
+            // if (x>y){
+            //     document.write(x)
+            // }
+            // else 
+            // document.write(y)
+            // (x>y) && document.write(x)
+            // (y>x) && document.write(y)
+            var result = x > y ? document.write(x) : document.write(y);
+            return result;
+        }
+
+        maximum(2, 5)
+
+        // function moyenne(){
+        //     var java = Number(prompt("Entrer note java"))
+        //     var python = Number(prompt("entrer note Python"))
+        //     return (java+python)/2
+        // }
+        // console.log(moyenne())
+        // document.write(moyenne())
+
+        function parite(j) {
+            return j%2 ? 'impaire' : 'paire';
+        }
+        console.log(parite(7))
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // for (var index = 20; index >=0; index-=2 ){
+        //     if(index!=0){
+
+        //         document.write(index+'-')
+        //     }
+        //     else document.write(index)
+        // }
+        document.write("<br/>")
+        for(var i=2;i<=100;i++) {
+            var trouve=false
+            for(var j=2;j<i; j++){
+                if(i%j==0){
+                    trouve=true
+                }
+                
+            }
+            if(trouve===false){
+                document.write(i,' ' )
+                console.log(i, ' ')
+            }
+        }
+        // calculer la somme des nbres premiers entre 0 et 100
+        //les principes de la POO: encapsulation, l'héritage et polymorphisme
+    </script>
+    
+</body>
+</html>
