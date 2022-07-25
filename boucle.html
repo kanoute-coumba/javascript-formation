@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <script>
@@ -17,22 +19,43 @@
         //     else document.write(index)
         // }
         document.write("<br/>")
-        for(var i=2;i<=100;i++) {
-            var trouve=false
-            for(var j=2;j<i; j++){
-                if(i%j==0){
-                    trouve=true
+        for (var i = 2; i <= 100; i++) {
+            let som = 0
+            var trouve = false
+            for (var j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    trouve = true
                 }
-                
             }
-            if(trouve===false){
-                document.write(i,' ' )
+            if (trouve === false) {
+                // document.write(i,' ' )
                 console.log(i, ' ')
+                // calculer la somme des nbres premiers entre 0 et 100
+                // let i=2
+                function somme() {
+                    som = som + i
+                    return som
+                }
+                // console.log(somme())
+                document.write(somme(), ' ')
             }
         }
-        // calculer la somme des nbres premiers entre 0 et 100
+        document.write("<br/>")
+        
+// Créez une fonction qui prend trois nombres comme arguments 
+// et renvoie TRUE si c’est un triangle, sinon renvoie FALSE.
+        function triangle(param1, param2, param3){
+            isTriangle = false
+            if(param1+1===param2 && param2+1===param3){
+                isTriangle = true
+            }
+            return isTriangle
+        }
+        document.write(triangle(6, 7, 8))
+
         //les principes de la POO: encapsulation, l'héritage et polymorphisme
     </script>
-    
+
 </body>
+
 </html>

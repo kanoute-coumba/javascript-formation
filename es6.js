@@ -8,6 +8,7 @@
 // }
 // looper()
 
+// let est de scope bloc ie il sera visible uniquement dans le bloc
 function calcul(){
     for (let i=0; i<6; i++) {
         console.log(i)
