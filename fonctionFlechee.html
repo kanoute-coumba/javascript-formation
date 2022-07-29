@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //creer une fonction qui repete chaque caractere n fois
+
+        // function repeter(chaine, n) {
+        //     return chaine.split("").map(c => c.repeat(n)).join('');
+        // }
+        const repeter = (chaine, n) => {
+            // map() permet de boucler sur un tableau et retoune un nouveau tableau
+            return chaine.split("").map(c => c.repeat(n)).join('');
+        }
+        console.log(repeter("coumba",3))
+
+        //faire la somme des nombres en utilisant la fonction flechee
+
+        const sommation = (nb1, nb2) => {
+            return nb1+nb2
+        }
+        console.log(sommation(34, 12))
+
+    </script>
+    
+</body>
+</html>

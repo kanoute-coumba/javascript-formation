@@ -18,9 +18,9 @@
         //     }
         //     else document.write(index)
         // }
+        let som = 0
         document.write("<br/>")
         for (var i = 2; i <= 100; i++) {
-            let som = 0
             var trouve = false
             for (var j = 2; j < i; j++) {
                 if (i % j == 0) {
@@ -32,26 +32,27 @@
                 console.log(i, ' ')
                 // calculer la somme des nbres premiers entre 0 et 100
                 // let i=2
-                function somme() {
-                    som = som + i
-                    return som
-                }
-                // console.log(somme())
-                document.write(somme(), ' ')
+               som = som + i
             }
         }
+        document.write(som)
         document.write("<br/>")
         
 // Créez une fonction qui prend trois nombres comme arguments 
 // et renvoie TRUE si c’est un triangle, sinon renvoie FALSE.
-        function triangle(param1, param2, param3){
-            isTriangle = false
-            if(param1+1===param2 && param2+1===param3){
-                isTriangle = true
-            }
-            return isTriangle
-        }
-        document.write(triangle(6, 7, 8))
+        // function triangle(param1, param2, param3){
+        //     isTriangle = false
+        //     if(param1+1===param2 && param2+1===param3){
+        //         isTriangle = true
+        //     }
+        //     return isTriangle
+        // }
+        // document.write(triangle(6, 8, 9))
+        function isTriangle(a, b, c) {
+  return a + b > c && b + c > a && c + a > b
+}
+
+document.write(isTriangle(2, 3, 5))
 
         //les principes de la POO: encapsulation, l'héritage et polymorphisme
     </script>
