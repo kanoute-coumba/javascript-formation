@@ -31,7 +31,7 @@ const girls = ["Coumba", "Amina", "fatou"]
 const myChildren = girls.concat(boys,cars)
 console.log(myChildren)
 
-// Créer une fonction qui i prend un tableau 
+// Créer une fonction qui prend un tableau 
 // avec des nombres et retourne un tableau 
 // avec les éléments multipliés par deux.
 
@@ -54,3 +54,40 @@ const racine = (n) => {
     return n.map( item => Math.sqrt(item) )
 }
 console.log(racine([4,25, 36]))
+
+
+let semaine = [ 'lun', 'mra', 'mer', 'jeu', 'ven', 'sam', 'ddi' ];
+semaine.pop()
+// document.write(semaine)
+
+semaine.push("dim")
+// document.write(semaine)
+semaine[1]= "mar"
+document.write(semaine.length)
+
+let fruits = ["Bannane","Fraises","Cerises","Poires"]
+
+
+const quelFruit = prompt("Vous desirez acheter quel fruit?");
+let trouve = false
+let t = 0
+for(let i in fruits){
+if (quelFruit===fruits[i]) {
+    fruits[t] = "";
+    alert("OK")
+    trouve = true
+} 
+t++
+}
+if (trouve===false){
+    document.write("<br/> indisponible <br/>")
+}
+
+document.write(" <br/> 2e affichage <br/>")
+
+let i=0
+for (i in fruits){
+    document.write(fruits[i]+"<br/>")
+}
+
+achatFruit();
