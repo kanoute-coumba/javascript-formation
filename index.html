@@ -9,15 +9,17 @@
 <body>
     <script>
         console.log("Hello World!");
-        // alert("Hello World!!!!!")
+        alert("Hello World!!!!!")
         var name = "Kanoute"
+        console.log(name.length,'longeur')
         var age = 23
         // Premiere methode de concatenation
         console.log("je m'apelle ", name, "et ja'ai ", age)
         // deuxieme methode d concatenation
         console.log(`je m'apelle ${name} et j'ai ${age}`)
-        // var username = prompt("Veuillez saisir votre nom")
-        // alert("Votre nom est "+ username)
+        var username = prompt("Veuillez saisir votre nom" )
+        alert("Votre nom est " + username)
+        
 
         var notePython = 7
         var noteJava = 12
@@ -46,10 +48,10 @@
         console.log(somme(20,56))
 
         function exercice1(nombre){
-            nombre +=1
-            return nombre
+            // nombre +=1
+            return nombre +=1
         }
-        console.log(exercice1(45))
+        console.log( "lincrement" + exercice1(45))
 
         function exercice2(a, b, c) {
            var max=0
@@ -91,6 +93,11 @@
             return j%2 ? 'impaire' : 'paire';
         }
         console.log(parite(7))
+
+        console.warn("Attention : cette action peut avoir des conséquences imprévues.");
+        console.info("Information : le serveur a été redémarré avec succès.");
+        console.error("Une erreur s'est produite !");
+        // console.clear();
 
     </script>
     

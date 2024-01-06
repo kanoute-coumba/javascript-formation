@@ -1,3 +1,7 @@
+<!-- Lorsqu'une page Web est chargée, le navigateur crée un modèle d' objet de document de la page.
+
+Le modèle HTML DOM est construit comme une arborescence d' Objets : -->
+<!-- avec le HTML DOM, JavaScript peut accéder et modifier tous les éléments d'un document HTML. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +13,17 @@
 </head>
 <body>
     <div id="wrapper">
-        <header> <div class="panier">
+        <header> 
+        <div class="panier">
             <h1 class="title"> Notre biblioteque </h1>
-                <p>Libre pour tout le monde </p>
+                <p id="demo">Libre pour tout le monde </p>
                     <form id="search" >
                         <input type="text" placeholder="Cherchez votre livre">
                     </form>
                 <h3 class="title"> Mon titre 3</h3>
             
-        </div></header>
+        </div>
+        </header>
         <div id="liste-livre">
             <h2 class="title">La liste</h2>
             <ul>

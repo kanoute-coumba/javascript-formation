@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function once for each array element:</p>
+
+<p id="demo"></p>
+
+<script>
+    // ForEach Elle est principalement utilisée pour exécuter une fonction donnée sur chaque élément du 
+    //tableau, généralement pour effectuer une opération ou une action sur chaque élément.,
+    //elle ne renvoie rien elle n'a pas une valeur de retour
+const numbers = [45, 4, 9, 16, 25];
+
+
+function doubleAndLog(num) {
+  console.log(num * 2,'foreach');
+}
+
+// const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(doubleAndLog);
+
+
+
+
+//La méthode map itère également sur chaque élément d'un tableau
+//Elle renvoie un nouveau tableau résultant des opérations effectuées sur chaque 
+//élément du tableau d'origine, sans modifier le tableau d'origine.
+//Elle est utilisée lorsque vous souhaitez transformer les éléments d'un tableau pour obtenir 
+//un nouveau tableau basé sur les transformations
+
+const num = [1, 2, 3, 4, 5];
+
+function double(num) {
+  return num * 2;
+}
+const doubledNumbers = num.map(double);
+
+console.log(doubledNumbers,'map'); // Résultat : [2, 4, 6, 8, 10]
+
+
+
+//La méthode filter est utilisée pour créer un nouveau tableau contenant tous les éléments d'un tableau d'origine 
+//qui satisfont une condition donnée.
+//Elle ne modifie pas le tableau d'origine
+
+const numbers1 = [1, 2, 3, 4, 5, 6];
+
+const evenNumbers = numbers1.filter((num) => num % 2 === 0);
+
+console.log(evenNumbers,'filter'); // Résultat : [2, 4, 6]
+
+
+//La méthode reduce est utilisée pour réduire les éléments d'un tableau à une seule 
+//valeur en appliquant une fonction accumulateur.
+
+const numbers2 = [1, 2, 3, 4, 5];
+// const words = ['world', 'hello', ' ', 'there', ','];
+
+// const sum = words.reduceRight((accumulator, currentValue) => accumulator + currentValue);
+const sum = numbers2.reduce((accumulator, currentValue) => accumulator + currentValue,1);
+console.log(sum,'reduce'); // Résultat : 15
+
+
+//La méthode every vérifie si tous les éléments d'un tableau satisfont une condition donnée. 
+//Elle renvoie true si tous les éléments passent le test, sinon false.
+
+const numbers3 = [2, 4, 6, 8, 10];
+
+const allEven = numbers3.every((num) => num % 2 === 0);
+
+console.log(allEven,'every'); // Résultat : true
+
+//La méthode indexOf renvoie la première position d'un élément spécifique dans un tableau. 
+//Si l'élément n'est pas trouvé, elle renvoie -1.
+
+const fruits = ['pomme', 'banane', 'orange', 'fraise'];
+
+const indexOfOrange = fruits.indexOf('orange');
+
+console.log(indexOfOrange,'indexof');
+
+
+//La méthode find renvoie le premier élément d'un tableau qui satisfait une condition donnée, 
+//ou undefined s'il n'y a aucun élément qui correspond à la condition.
+// const fruits = ['pomme', 'banane', 'orange', 'fraise'];
+
+const result = fruits.find((fruit) => fruit.length > 5);
+
+console.log(result,'find'); // Résultat : 'banane' (le premier fruit avec plus de 5 caractères)
+
+//La méthode findIndex renvoie l'indice du premier élément d'un tableau qui satisfait une condition donnée, 
+//ou -1 s'il n'y a aucun élément qui correspond à la condition.
+const numbers4 = [10, 20, 30, 40, 50];
+
+const index = numbers4.findIndex((num) => num > 25);
+
+console.log(index,'findIndex'); // Résultat : 2 (l'indice du premier nombre supérieur à 25)
+
+
+</script>
+
+</body>
+</html>

@@ -25,17 +25,18 @@
             for (var j = 2; j < i; j++) {
                 if (i % j == 0) {
                     trouve = true
+                    
                 }
             }
             if (trouve === false) {
                 // document.write(i,' ' )
-                console.log(i, ' ')
+                console.log(i, ' ma valeur')
                 // calculer la somme des nbres premiers entre 0 et 100
                 // let i=2
                som = som + i
             }
         }
-        document.write(som)
+        document.write(som,'ma somme')
         document.write("<br/>")
         
 // Créez une fonction qui prend trois nombres comme arguments 
@@ -53,6 +54,32 @@
 }
 
 document.write(isTriangle(2, 3, 5))
+
+//autre methode with function
+function sommeNombresPremiers(maximum) {
+  let somme = 0;
+
+  function estPremier(nombre) {
+    for (let i = 2; i < nombre; i++) {
+      if (nombre % i === 0) {
+        return false;
+      }
+    }
+    return nombre > 1;
+  }
+
+  for (let i = 2; i <= maximum; i++) {
+    if (estPremier(i)) {
+      somme += i;
+    }
+  }
+
+  return somme;
+}
+
+const resultat = sommeNombresPremiers(100);
+console.log(resultat);
+
 
         //les principes de la POO: encapsulation, l'héritage et polymorphisme
     </script>
